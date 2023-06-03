@@ -1,0 +1,122 @@
+.hotels-form {
+    position: sticky;
+    top: 10px;
+    max-width: 266px;
+    width: 100%;
+    padding: 10px;
+    background-color: #febb02;
+    border-radius: 10px;
+}
+
+.hotels-form-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.hotels-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hotels-label-text {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.hotels-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hotels-calendar-box {
+    position: relative;
+
+    margin-bottom: 10px;
+}
+
+.hotels-calendar-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: start;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hotels-calendar {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 50%;
+    z-index: 10;
+    transform: translateX(45%);
+
+    &.show {
+        display: block;
+    }
+}
+
+.hotels-mini-labels-box {
+    padding: 10px;
+}
+
+.hotels-mini-labels {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.hotels-mini-labels-text {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.hotels-number-inputs {
+    max-width: 55px;
+    width: 100%;
+}
+
+.hotels-from-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0071c2;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 555px) {
+    .hotels-form {
+        position: relative;
+        top: 0;
+        max-width: none;
+        margin-bottom: 25px;
+    }
+
+    .hotels-calendar {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 50%;
+        z-index: 10;
+        transform: translateX(50%);
+    
+        &.show {
+            display: block;
+        }
+    }
+} 

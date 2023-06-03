@@ -1,0 +1,44 @@
+.save-time {
+    padding: 50px 0;
+    background-color: #003580;
+}
+
+.save-time-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.save-time-desc {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.save-time-form {
+    display: flex;
+    align-items: stretch;
+    max-width: 404px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.save-time-input {
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.save-time-btn {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0071c2;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}

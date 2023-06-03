@@ -1,0 +1,42 @@
+.property-type {
+    margin-bottom: 30px;
+}
+
+.property-type-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.property-type-img {
+    width: 189px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.property-type-text {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #444;
+}
+
+.property-type-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+@media only screen and (max-width: 440px) {
+    .property-type-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

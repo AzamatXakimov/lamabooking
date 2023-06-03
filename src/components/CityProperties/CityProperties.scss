@@ -1,0 +1,38 @@
+.city-properties {
+    margin-bottom: 30px;
+}
+
+.city-properties-box {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.city-properties-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.city-properties-textbox {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.city-properties-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.city-properties-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}

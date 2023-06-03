@@ -1,0 +1,56 @@
+/* ROOT */
+:root{
+    --main-font-family: "Open Sans", "Arial", sans-serif;
+    --main-font-weight: 400; 
+    --main-body-bg-color: #fff;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/open-sans-v35-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/open-sans-v35-latin-700.woff2') format('woff2'); 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: var(--main-font-family);
+    font-weight: var(--main-font-weight);
+    background-color: var(--main-body-bg-color);
+}
+
+.container{
+    max-width: 1064px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+.site-main{
+    flex-grow: 1;
+}

@@ -1,0 +1,230 @@
+.home-hero {
+    padding-bottom: 45px;
+    margin-bottom: 50px;
+    background-color: #003580;
+}
+
+.home-hero-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.home-hero-desc {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.home-hero-link {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    background-color: #0071C2;
+    text-decoration: none;
+}
+
+.home-hero-form {
+    position: relative;
+    bottom: -74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 3px solid #febb02;
+}
+
+.home-hero-form-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.home-hero-input-box {
+    display: flex;
+    align-items: center;
+    
+    &::before {
+        display: inline-block;
+        width: 20px;
+        height: 16px;
+        margin-right: 10px;
+        background-image: url("../../assets/images/bed-icon-gray.svg");
+        background-repeat: no-repeat;   
+        background-position: center;
+        content: "";
+    }
+}
+
+.home-hero-input {
+    border-color: transparent;
+}
+
+.home-hero-from-btn {
+    display: inline-block;
+    padding: 8px;
+    color: #fff;
+    background-color: #0071C2;
+    border: none;
+    cursor: pointer;
+}
+
+.home-hero-calendar-box {
+    position: relative;
+}
+
+.home-hero-calendar-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: #d3d3d3;
+    border: none;
+    cursor: pointer;
+
+    &::before{
+        display: inline-block;
+        margin-right: 10px;
+        width: 14px;
+        height: 16px;
+        background-image: url("../../assets/images/calendar-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+    }
+}
+
+.home-hero-calendar {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 2;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}
+
+.home-hero-people-box {
+    position: relative;
+}
+
+.home-hero-people-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    color: #d3d3d3;
+    border: none;
+    cursor: pointer;
+
+    &::before{
+        display: inline-block;
+        margin-right: 10px;
+        width: 14px;
+        height: 16px;
+        background-image: url("../../assets/images/people-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+    }
+}
+
+.home-hero-people-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 3;
+    display: none;
+    max-width: 220px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 0 10px -5px rgba(0,0,0,.4);
+    border-radius: 5px;
+
+    &.show {
+        display: block;
+    }
+}
+
+.home-hero-people-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.home-hero-people-text {
+    color: gray;
+}
+
+.home-hero-people-btn-box {
+    display: flex;
+    align-items: center;
+}
+
+.home-hero-people-menu-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #0071c2;
+    color: #0071c2;
+    cursor: pointer;
+
+    &:disabled{
+        cursor: not-allowed;
+    }
+}
+
+.home-hero-people-number {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width: 810px) {
+    .home-hero-form-inner {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+
+    .home-hero-input-box {
+        margin-bottom: 25px;
+    }
+
+    .home-hero-people-box{
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 455px) {
+    .home-hero-form {
+        flex-direction: column;
+    }
+
+    .home-hero-form-inner {
+        align-items: center;
+
+        &:first-child {
+            margin-bottom: 25px;
+        }
+    }
+
+    
+    .home-hero-calendar {
+        left: -80px;
+    }
+}

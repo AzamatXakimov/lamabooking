@@ -1,0 +1,146 @@
+.hotels-card {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+}
+
+.hotels-card-img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.hotels-card-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hotels-card-info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.hotels-card-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #0071c2;
+    font-size: 20px;
+}
+
+.hotels-card-text {
+    display: block;
+    font-size: 12px;
+}
+
+.hotels-card-green-text {
+    display: block;
+    color: #008009;
+    font-size: 12px;
+}
+
+.hotels-card-price-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 159px;
+    width: 100%;
+}
+
+.hotels-card-state-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hotels-card-state-text {
+    display: inline-block;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.hotels-card-state-rating {
+    display: inline-block;
+    padding: 5px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    background-color: #003580;
+}
+
+.hotels-card-button-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hotels-card-prise {
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.hotels-card-prise-desc {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: gray;
+}
+
+.hotels-card-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 5px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #0071c2;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 995px) {
+    .hotels-card {
+        flex-direction: column;
+    }
+    .hotels-card-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hotels-card-title {
+        margin-bottom: 15px;
+    }
+    .hotels-card-text {
+        margin-bottom: 8px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .hotels-card-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .hotels-card-button-box {
+        margin-top: 20px;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width: 670px) {
+    .hotels-card {
+        position: relative;
+        padding-top: 50px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: 1px solid #d3d3d3;
+    }
+}

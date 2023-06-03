@@ -1,0 +1,119 @@
+.site-header {
+    padding-top: 11px;
+    padding-bottom: 50px;
+    background-color: #003580;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hedaer-btn-box {
+    display: flex;
+    align-items: center;
+}
+
+.header-btn-link {
+    
+    padding: 5px 10px;
+    color: #003580;
+    background-color: #f0f0f0;
+    text-decoration: none;
+
+    &:first-child {
+        margin-right: 20px;
+    }
+}
+
+.header-logout-btn {
+    padding: 5px 10px;
+    color: #003580;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.header-nav-list {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.header-nav-item {
+    &:nth-child(1) {
+        & .header-nav-link::before{
+            width: 20px;
+            background-image: url("../../assets/images/bed-icon.svg");
+        }
+    }
+    &:nth-child(2) {
+        & .header-nav-link::before{
+            width: 18px;
+            background-image: url("../../assets/images/plane-icon.svg");
+        }
+    }
+    &:nth-child(3) {
+        & .header-nav-link::before{
+            width: 16px;
+            background-image: url("../../assets/images/car-icon.svg");
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.header-nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: border-color 0.3s ease;
+
+    &::before {
+        display: inline-block;
+        height: 16px;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        content: "";
+    }
+
+    &.active {
+        border-color: #fff;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .site-header {
+        padding-bottom: 30px;
+    }
+
+    .header-nav-list {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-nav-item {    
+        &:not(:last-child) {
+            margin-right: 0px;
+            margin-bottom: 30px;
+        }
+    }
+}
