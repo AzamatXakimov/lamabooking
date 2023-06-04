@@ -5,9 +5,11 @@ import "swiper/css";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase.config";
+import { useNavigate } from "react-router-dom";
 
 export const LoveGuestHome = () => {
     const loveGuestHomeRef = collection(db, "flats");
+    const navigate = useNavigate()
 
     const [loveGuestHomes, setloveGuestHomes] = useState([])
 
@@ -77,6 +79,10 @@ export const LoveGuestHome = () => {
                                         {item.state}
                                     </span>
                                 </div>
+
+                                <div className="guest-love-home-box-overlay" onClick={() => {
+                                    navigate(`/hotels/${item.id}`)
+                                }}></div>
                             </div>
                         </SwiperSlide>
                     ))}

@@ -81,12 +81,12 @@ export const HotelsSearchBar = ({submitFn}) => {
                 <label className="hotels-mini-labels">
                     <span className="hotels-mini-labels-text">Min price per night</span>
 
-                    <input className="hotels-number-inputs" type="number" defaultValue={0} aria-label="Enter min price per night" ref={minPriceRef} min={0} />
+                    <input className="hotels-number-inputs" type="number" aria-label="Enter min price per night" ref={minPriceRef} min={0} />
                 </label>
                 <label className="hotels-mini-labels">
                     <span className="hotels-mini-labels-text">Max price per night</span>
 
-                    <input className="hotels-number-inputs" type="number" defaultValue={1} aria-label="Enter max price per night" ref={maxPriceRef} min={1}  />
+                    <input className="hotels-number-inputs" type="number" aria-label="Enter max price per night" ref={maxPriceRef} min={0}  />
                 </label>
                 <label className="hotels-mini-labels">
                     <span className="hotels-mini-labels-text">Adult</span>

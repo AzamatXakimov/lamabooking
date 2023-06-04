@@ -9,6 +9,7 @@ import austinImg from "../../assets/images/austin.webp";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase.config";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const CityProperties = () => {
     const hotelsCountryRef = collection(db, "hotels_countries");
@@ -20,6 +21,8 @@ export const CityProperties = () => {
             setHotelsCoutry(data.docs.map(doc => ({...doc.data(), id: doc.id})))
         }).catch(err => console.log(err));
     }
+
+    const navigate = useNavigate()
     useEffect(() => {
         getHotelsCountry()
     }, []);
@@ -61,6 +64,10 @@ export const CityProperties = () => {
                                         {item.properties} properties
                                     </p>
                                 </div>
+
+                                <div className="city-properties-box-overlay" onClick={() => {
+                                    navigate("/hotels")
+                                }}></div>
                             </div>
                         </SwiperSlide>
                     ))}

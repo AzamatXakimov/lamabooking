@@ -12,28 +12,28 @@ export const HotelsCard = ({obj}) => {
                     <h3 className="hotels-card-title">
                         {obj.location}
                     </h3>
-                    <span class="hotels-card-text">
+                    <span className="hotels-card-text">
                         {obj.region}
                     </span>
                     <div>
-                        <strong class="hotels-card-text">
+                        <strong className="hotels-card-text">
                             region: {obj.province} 
                         </strong>
-                        <strong class="hotels-card-text">
+                        <strong className="hotels-card-text">
                             area: {obj.area} 
                         </strong>
                     </div>
 
-                    <strong class="hotels-card-text">
+                    <strong className="hotels-card-text">
                         Apartment with {obj.air_conditioner ? `Air conditioner,` : ""} {obj.fridge ? `Fridge` : ""}. 
                     </strong>
-                    <span class="hotels-card-text">
+                    <span className="hotels-card-text">
                         Have {obj.gas ? "Gas •" : ""} {obj.light ? "Light •" : ""} {obj.cold_water ? "Cold Water •" : ""} {obj.hot_water ? "Hot Water" : ""}.
                     </span>
 
 
-                    <strong class="hotels-card-green-text">About flat</strong>
-                    <span class="hotels-card-green-text">{obj.total_floors} storey building. The apartment is located on the {obj.flat_floor}th floor</span>
+                    <strong className="hotels-card-green-text">About flat</strong>
+                    <span className="hotels-card-green-text">{obj.total_floors} storey building. The apartment is located on the {obj.flat_floor}th floor</span>
                 </div>
 
                 <div className="hotels-card-price-box">

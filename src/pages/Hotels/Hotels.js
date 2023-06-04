@@ -6,8 +6,10 @@ import "./Hotels.scss";
 import { HotelsCard } from "../../components/HotelsCard/HotelsCard";
 import { db } from "../../firebase.config";
 import { collection, getDocs,} from "firebase/firestore";
+import { useSelector } from "react-redux";
 
 export const Hotels = () => {
+    const {searchValue} = useSelector((state) => state);
     const flatsCollectionRef = collection(db, "flats");
 
     const [hotels, setHotels] = useState([])
@@ -23,11 +25,11 @@ export const Hotels = () => {
     }
 
     const hendelSubmit = (search, minPrice, maxPrice, adultCount, childrenCount, roomCount) => {
+
         const updateFlats = hotels.filter(item => (item.location.match(search) &&
-            (minPrice <= item.price) && (maxPrice >= item.price) && (adultCount <= item.adult) && (childrenCount <= item.children) && (roomCount <= item.room)
+            (minPrice ? minPrice <= item.price : true) && (maxPrice ? maxPrice >= item.price : true) && (adultCount <= item.adult) && (childrenCount <= item.children) && (roomCount <= item.room)
         ))
         
-        console.log(updateFlats);
         setSearchHotels([...updateFlats])
         // const flatsQuery = query(flatsCollectionRef, search ? where("location", "==", search) : "", minPrice ?  where("price", ">=", minPrice) : "", maxPrice ? where("price", "<=", maxPrice) : "", adultCount ? where("adult", ">=", adultCount) : "", childrenCount ? where("children", ">=", childrenCount) : "",roomCount ? where("room", ">=", roomCount) : "" )
     }
@@ -36,6 +38,11 @@ export const Hotels = () => {
     useEffect(() => {
         getFlats(flatsCollectionRef)
     }, []);
+    useEffect(() => {
+        console.log();
+        hendelSubmit(searchValue.searchValue?.search ? searchValue.searchValue?.search : "", "", "", searchValue.searchValue?.adult, searchValue.searchValue?.children, searchValue.searchValue?.room)
+    }, [hotels]);
+
     return <>
         <Header/>
         <main className="site-main">

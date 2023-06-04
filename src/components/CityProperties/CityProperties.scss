@@ -9,6 +9,15 @@
     border-radius: 10px;
 }
 
+.city-properties-box-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
 .city-properties-img {
     width: 100%;
     height: 100%;
@@ -36,3 +45,5 @@
     font-weight: bold;
     color: #fff;
 }
+
+
