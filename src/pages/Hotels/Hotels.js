@@ -24,11 +24,12 @@ export const Hotels = () => {
         }).catch(err => console.log(err));
     }
 
-    const hendelSubmit = (search, minPrice, maxPrice, adultCount, childrenCount, roomCount) => {
-
+    const hendelSubmit = (search, minPrice, maxPrice, adultCount, childrenCount, roomCount, country) => {
+        console.log(search, minPrice, maxPrice, adultCount, childrenCount, roomCount, country);
         const updateFlats = hotels.filter(item => (item.location.match(search) &&
-            (minPrice ? minPrice <= item.price : true) && (maxPrice ? maxPrice >= item.price : true) && (adultCount <= item.adult) && (childrenCount <= item.children) && (roomCount <= item.room)
+            (minPrice ? minPrice <= item.price : true) && (maxPrice ? maxPrice >= item.price : true) && (adultCount <= item.adult) && (childrenCount <= item.children) && (roomCount <= item.room) && (country ? country == item.province : true)
         ))
+        // const updateFlats = hotels.filter(item => (country ? country == item.province : true)))
         
         setSearchHotels([...updateFlats])
         // const flatsQuery = query(flatsCollectionRef, search ? where("location", "==", search) : "", minPrice ?  where("price", ">=", minPrice) : "", maxPrice ? where("price", "<=", maxPrice) : "", adultCount ? where("adult", ">=", adultCount) : "", childrenCount ? where("children", ">=", childrenCount) : "",roomCount ? where("room", ">=", roomCount) : "" )
@@ -40,7 +41,7 @@ export const Hotels = () => {
     }, []);
     useEffect(() => {
         console.log();
-        hendelSubmit(searchValue.searchValue?.search ? searchValue.searchValue?.search : "", "", "", searchValue.searchValue?.adult, searchValue.searchValue?.children, searchValue.searchValue?.room)
+        hendelSubmit(searchValue.searchValue?.search ? searchValue.searchValue?.search : "", "", "", searchValue.searchValue?.adult, searchValue.searchValue?.children, searchValue.searchValue?.room, searchValue.searchValue?.country)
     }, [hotels]);
 
     return <>

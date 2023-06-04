@@ -10,8 +10,11 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase.config";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { addSearchValues } from "../../redux/searchValues/searchValuesActions";
+import { useDispatch, useSelector } from "react-redux";
 
 export const CityProperties = () => {
+    const {searchValue} = useSelector((state) => state);
     const hotelsCountryRef = collection(db, "hotels_countries");
 
     const [hotelsCoutry, setHotelsCoutry] = useState([])
@@ -23,6 +26,7 @@ export const CityProperties = () => {
     }
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     useEffect(() => {
         getHotelsCountry()
     }, []);
@@ -66,6 +70,10 @@ export const CityProperties = () => {
                                 </div>
 
                                 <div className="city-properties-box-overlay" onClick={() => {
+                                    dispatch(addSearchValues({
+                                        ...searchValue.searchValue,
+                                        country: item.name
+                                    }));
                                     navigate("/hotels")
                                 }}></div>
                             </div>

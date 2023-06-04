@@ -7,7 +7,8 @@ const initialStateToken = {
         endDate: "",
         adult: 1,
         children: 0,
-        room: 0
+        room: 1,
+        country: "",
     }
 };
 
